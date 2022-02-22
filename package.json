@@ -1,11 +1,15 @@
 {
-  "name": "my-app",
+  "name": "react_ui_test_dede",
   "version": "0.1.0",
   "private": false,
   "main": "dist/index.js",
   "author": "dede",
-  "files": ["dist"],
-  "keywords": ["react-ui"],
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react-ui"
+  ],
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
@@ -81,5 +85,15 @@
     "@types/react-transition-group": "^4.4.3",
     "react-transition-group": "^4.4.2"
   },
-  "proxy": "https://www.mocky.io"
+  "proxy": "https://www.mocky.io",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decrystal/react_ui_test.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/decrystal/react_ui_test/issues"
+  },
+  "homepage": "https://github.com/decrystal/react_ui_test#readme"
 }
