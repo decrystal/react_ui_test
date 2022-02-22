@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": false,
   "main": "dist/index.js",
+  "author": "dede",
+  "files": ["dist"],
+  "keywords": ["react-ui"],
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
@@ -34,7 +37,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-ts": "tsc -p tsconfig.build.json",
     "build-storybook": "build-storybook -s public",
-    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css"
+    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
+    "prepublish": "npm run build"
   },
   "eslintConfig": {
     "extends": [
