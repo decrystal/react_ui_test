@@ -1,0 +1,91 @@
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 30px;
+    list-style: none;
+
+    box-shadow: $menu-box-shadow;
+    > .MenuItem {
+        padding: $menu-item-padding-y $menu-item-padding-x;
+        cursor: pointer;
+        transition: $menu-transition;
+        &.is-disabled {
+            color: $menu-item-disabled-color;
+            //设置none，指针移入不会设置任何样式
+            pointer-events: none;
+            cursor: default;
+        }
+    }
+}
+
+.menuHorizontal {
+    //border-bottom: $menu-border-width solid $menu-border-color;
+    > .MenuItem {
+        &.is-active,
+        &:hover {
+            color: $menu-item-active-color;
+            border-bottom: $menu-item-active-border-width solid
+                $menu-item-active-color;
+        }
+    }
+}
+.menuVertical {
+    flex-direction: column;
+    border-bottom: 0px;
+    margin: 10px 20px;
+    border-right: $menu-border-width solid $menu-border-color;
+    > .MenuItem {
+        &.is-active,
+        &:hover {
+            color: $menu-item-active-color;
+            border-left: $menu-item-active-border-width solid
+                $menu-item-active-color;
+        }
+    }
+}
+.subItem {
+    margin: 0px;
+    padding: $menu-item-padding-y $menu-item-padding-x;
+    flex-direction: column;
+    position: relative;
+    box-shadow: none;
+    &:hover {
+        > .subTitle > .icon {
+            transform: rotate(90deg);
+        }
+    }
+    > .subMenuClasses {
+        //display: none;
+        //transition: opacity 0.2s ease-in;
+        > .MenuItem {
+            margin-left: -20px;
+            border-bottom: $subMenu-item-border-width solid
+                $subMenu-item-border-color;
+            list-style: none;
+            &:hover {
+                color: yellow;
+                border-left: $menu-item-active-border-width solid
+                    $menu-item-active-color;
+            }
+        }
+    }
+    // > .isOpen {
+    //     //display: block;
+    //     margin-left: 1px;
+    // }
+}
+.subHorizontal {
+    position: absolute;
+    z-index: 100;
+    top: calc(100% + 3px);
+    // top: -2px;
+    left: 0;
+}
+.subTitle {
+    display: flex;
+    > .icon {
+        margin-left: 5px;
+        margin-top: 3px;
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    //打包用什么模块
+    "module": "esnext",
+    "target": "ES3",
+    //生成相应的 .d.ts文件。
+    "declaration": true,
+    //支持jsx语法
+    "jsx": "react",
+    "moduleResolution":"Node",
+    "allowSyntheticDefaultImports": true,
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx",
+    "src/setupTests.ts",
+    "src/stories/*",
+  ]
+}

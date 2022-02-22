@@ -1,0 +1,27 @@
+// config
+@import './variables.scss';
+
+//layout
+@import 'reboot';
+
+//抽离公共css代码
+@import './mixin';
+@import '../components//Transition/transiton_animation.scss';
+//icon样式
+@import '../components/Icon/style.scss';
+@import '../components//Menu/_animation.scss';
+//按钮大小
+@import '../components/Button/style.scss';
+
+// menu样式
+@import '../components/Menu/style.scss';
+
+//input 样式
+@import '../components/Input/Input.scss';
+
+//AutoComplete 样式
+@import '../components/AutoComplete/style.scss';
+
+@import '../components/Upload/style';
+
+@import '../components/Progress/style';

@@ -1,0 +1,78 @@
+.viking-input-wrapper {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+    &:focus {
+        color: $input-focus-color;
+        background-color: $input-focus-bg;
+        border-color: $input-focus-border-color;
+        outline: 0;
+        box-shadow: $input-focus-box-shadow;
+        // Avoid using mixin so we can pass custom focus shadow properly
+    }
+    > .icon-wrapper {
+        position: absolute;
+        height: 100%;
+        width: 35px;
+        justify-content: center;
+        color: red;
+        right: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        svg {
+            color: $input-placeholder-color;
+        }
+    }
+}
+.icon-wrapper + .viking-input-inner {
+    padding-right: 35px;
+}
+
+.viking-input-inner {
+    width: 100%;
+    padding: $input-padding-y 2rem $input-padding-y 0.5rem;
+    // border: 1px red solid;
+    font-family: $input-font-family;
+    font-size: $input-font-size;
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    color: $input-color;
+    background-color: $input-bg;
+    background-clip: padding-box;
+    border: $input-border-width solid $input-border-color;
+    &:focus {
+        color: $input-focus-color;
+        background-color: $input-focus-bg;
+        border-color: $input-focus-border-color;
+        outline: 0;
+        box-shadow: $input-focus-box-shadow;
+        // Avoid using mixin so we can pass custom focus shadow properly
+    }
+}
+.input-size-sm {
+    padding: $input-padding-y-sm 2rem $input-padding-y-sm 0.5rem;
+    font-size: $input-font-size-sm;
+    border-radius: $input-border-radius-sm;
+}
+
+.input-size-lg {
+    padding: $input-padding-y-lg 2rem $input-padding-y-lg 0.5rem;
+    font-size: $input-font-size-lg;
+    border-radius: $input-border-radius-lg;
+}
+.viking-input-group-append {
+    display: flex;
+    align-items: center;
+    padding: $input-padding-y $input-padding-x;
+    margin-bottom: 0; // Allow use of <label> elements by overriding our default margin-bottom
+    font-size: $input-font-size; // Match inputs
+    font-weight: $font-weight-normal;
+    line-height: $input-line-height;
+    color: $input-group-addon-color;
+    text-align: center;
+    white-space: nowrap;
+    background-color: $input-group-addon-bg;
+    border: $input-border-width solid $input-group-addon-border-color;
+    border-radius: $input-border-radius;
+}
